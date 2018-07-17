@@ -6,8 +6,8 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-        Main main=new Main();
-        
+        Main main = new Main();
+
     }
 
     public int[] intersection(int[] nums1, int[] nums2) {
@@ -25,6 +25,7 @@ public class Main {
         int[] res = new int[set2.size()];
         Iterator iterator = set2.iterator();
 
+        //遍历HashSet中的元素，存入数组中
         for (int i = 0; i < set2.size(); i++) {
             res[i] = (int) iterator.next();
         }
