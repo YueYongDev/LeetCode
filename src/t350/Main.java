@@ -7,8 +7,8 @@ public class Main {
 
     public static void main(String[] args) {
         Main main = new Main();
-        int[] a = {3, 1, 2};
-        int[] b = {1, 1};
+        int[] a = {1, 2, 2, 1};
+        int[] b = {2, 2};
         int[] c = main.intersect(a, b);
         for (int x : c) {
             System.out.println(x);
@@ -24,7 +24,7 @@ public class Main {
         for (int i = 0; i < nums2.length; i++) {
             if (num1.contains(nums2[i])) {
                 res.add(nums2[i]);
-                num1.remove(nums2[i]);
+                num1.remove((Object) nums2[i]);
             }
         }
 
