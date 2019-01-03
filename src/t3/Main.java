@@ -3,6 +3,9 @@ package t3;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/
+ */
 public class Main {
     public int lengthOfLongestSubstring(String s) {
         int max = 0;

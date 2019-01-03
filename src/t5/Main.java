@@ -1,5 +1,8 @@
 package t5;
 
+/**
+ * https://leetcode-cn.com/problems/longest-palindromic-substring/
+ */
 public class Main {
     public static void main(String[] args) {
         Main main = new Main();
