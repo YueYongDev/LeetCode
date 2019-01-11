@@ -1,8 +1,11 @@
 package t929;
 
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Set;
+
+/**
+ * https://leetcode-cn.com/problems/unique-email-addresses/
+ */
 
 public class Main {
     public static void main(String[] args) {
