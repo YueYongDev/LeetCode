@@ -1,7 +1,5 @@
 package t985;
 
-import java.util.Arrays;
-
 public class Main {
     public static void main(String[] args) {
         int[] A = {1, 2, 3, 4};
