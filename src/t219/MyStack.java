@@ -2,7 +2,7 @@ package t219;
 
 import java.util.HashMap;
 
-public class Main {
+public class MyStack {
     public static void main(String[] args) {
 
     }
