@@ -1,7 +1,5 @@
 package t706;
 
-import java.util.ArrayList;
-
 class MyHashMap {
 
     public static void main(String[] args) {
@@ -45,7 +43,7 @@ class MyHashMap {
      * Removes the mapping of the specified value key if this map contains a mapping for the key
      */
     public void remove(int key) {
-        map[key]=-1;
+        map[key] = -1;
     }
 
 //    ArrayList<int[]> mapList = new ArrayList<>();
