@@ -1,5 +1,9 @@
 package t788;
 
+/**
+ * https://leetcode-cn.com/problems/rotated-digits/
+ */
+
 public class Solution {
 
     public static void main(String[] args) {
