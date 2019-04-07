@@ -14,19 +14,30 @@ public class Main {
 
     public List<Integer> findAnagrams(String s, String p) {
         List<Integer> list = new ArrayList<>();
-        int len_long = s.length();
-        int len_short = p.length();
-        char[] cs = new char[len_short];
-        char[] cs_p = p.toCharArray();
-        Arrays.sort(cs_p);
-        for (int i = 0; i <= len_long - len_short; i++) {
-            int index = i;
-            for (int j = 0; j < len_short; j++) {
-                cs[j] = s.charAt(index);
-                index++;
+        char[] ss = s.toCharArray();
+        char[] ps = p.toCharArray();
+        int[] pmap = new int[26];
+        for (char c : ps) {
+            pmap[c - 'a']++;
+        }
+        for (int i = 0; i < ss.length - ps.length + 1; i++) {
+            char[] temp = new char[ps.length];
+            int num = 0;
+            for (int j = i; j < i + ps.length; j++) {
+                temp[num++] = ss[j];
             }
-            Arrays.sort(cs);
-            if (Arrays.equals(cs_p, cs)) {
+            int[] smap = new int[26];
+            for (char c : temp) {
+                smap[c - 'a']++;
+            }
+            boolean equal = true;
+            for (int j = 0; j < 26; j++) {
+                if (pmap[j] != smap[j]) {
+                    equal = false;
+                    break;
+                }
+            }
+            if (equal) {
                 list.add(i);
             }
         }
