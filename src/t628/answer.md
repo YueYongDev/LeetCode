@@ -1,7 +1,7 @@
 [628. 三个数的最大乘积](https://leetcode-cn.com/problems/maximum-product-of-three-numbers/)
 
 先排序，然后比较三个最大的正数和最小的两个负数及最大正数大乘积即可
-```angelscript
+```text
 class Solution {
     public int maximumProduct(int[] nums) {
         Arrays.sort(nums);

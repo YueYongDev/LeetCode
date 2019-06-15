@@ -1,5 +1,4 @@
-地址：[t661 图片平滑器](https://leetcode-cn.com/problems/image-smoother/
-)
+地址：[t661 图片平滑器](https://leetcode-cn.com/problems/image-smoother/)
 
 本题类似于深度学习中卷积神经网络的平均池化操作，本人采用的是暴力遍历的方法，先用8个变量表示其周围8个角，然后依次判断i，j和row和column之间的关系，如果合理，则参与计算并放到一个新的二维数组中，如此反复，最后返回该二维数组，代码如下：
 ```java
