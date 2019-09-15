@@ -1,37 +1,38 @@
 package t71;
 
+import java.util.Stack;
+
 public class Main {
 
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(1);
-        l1.next = new ListNode(1);
-        l1.next.next = new ListNode(2);
-        l1.next.next.next = new ListNode(3);
-        l1.next.next.next.next = new ListNode(3);
 
-        ListNode listNode = new Main().deleteDuplicates(l1);
-
-        while (listNode != null) {
-            System.out.print(listNode.val + " ");
-            listNode = listNode.next;
-        }
     }
 
-    public ListNode deleteDuplicates(ListNode head) {
-        if (head == null) return null;
-        ListNode l1 = head;
-        while (l1.next != null) {
-            if (l1.val == l1.next.val) {
-                if (l1.next.next == null) {
-                    l1.next = null;
-                } else {
-                    l1.next = l1.next.next;
+    public String simplifyPath(String path) {
+        if (path.length() == 0) {
+            return path;
+        }
+        Stack<String> stack = new Stack<>();
+        String[] ss = path.split("/");
+        for (String s : ss) {
+            if (s.length() == 0 || ".".equals(s)) {
+                continue;
+            } else if ("..".equals(s)) {
+                if (!stack.empty()) {
+                    stack.pop();
                 }
             } else {
-                l1 = l1.next;
+                stack.push(s);
             }
         }
-
-        return head;
+        StringBuilder sb = new StringBuilder();
+        while (!stack.empty()) {
+            sb.insert(0, stack.pop());
+            sb.insert(0, "/");
+        }
+        if (sb.length() == 0) {
+            sb.append("/");
+        }
+        return sb.toString();
     }
 }

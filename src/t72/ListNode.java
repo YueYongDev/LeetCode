@@ -1,4 +1,4 @@
-package t71;
+package t72;
 
 public class ListNode {
     int val;
