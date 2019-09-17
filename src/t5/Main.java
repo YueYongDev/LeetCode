@@ -21,18 +21,17 @@ public class Main {
                         max = subString.length();
                         temp = subString;
                     }
-                } else break;
+                } else {
+                    break;
+                }
             }
         }
 
         return temp;
     }
 
-    public boolean isHuiWen(String s) {
+    private boolean isHuiWen(String s) {
         StringBuilder sb1 = new StringBuilder(s);
-        if (s.equals(sb1.reverse().toString())) {
-            return true;
-        } else
-            return false;
+        return s.equals(sb1.reverse().toString());
     }
 }
